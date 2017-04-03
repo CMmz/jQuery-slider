@@ -19,16 +19,16 @@ $(document).ready(function () {    //this loads jQuery
     $('.active').show();
 
     $('#next').on('click', function() {
-       
-    $('.active').removeClass('active').addClass('oldActive');
-    if($('.oldActive').is(':last-child')){
-      $('.slide').first().addClass('active');
-    } else {
-      $('.oldActive').next().addClass('active');
-    }
-    $('.oldActive').removeClass('oldActive');
-    $('.slide').fadeOut(speed);
-    $('.active').fadeIn(speed);
+       $('.active').removeClass('active').addClass('oldActive'); // take the active class off
+        if ($('.oldActive').is(':last-child')) {
+           $('.slide').first().addClass('active'); // bring the 1st one back in
+        } else {
+           $ ('.oldActive').next().addClass('active');
+        }
+        
+        $('.oldActive').removeClass('oldActive');
+       $('.slide').fadeOut(speed);
+       $('.active').fadeIn(speed);
     });
 
     $('#previous').on('click', function() {
