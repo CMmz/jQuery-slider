@@ -23,9 +23,10 @@ $(document).ready(function () {    //this loads jQuery
         if ($('.oldActive').is(':last-child')) {
            $('.slide').first().addClass('active'); // bring the 1st one back in
         } else {
-            $('.oldActive').next().addClass('active'); // I missed a $ on this selector
+           $ ('.oldActive').next().addClass('active');
         }
-        $('.oldActive').removeClass('oldActive'); // I missed a . on this selector and on the next line. Rule appears to be adding . on selectors but not on targets
+        
+        $('.oldActive').removeClass('oldActive');
        $('.slide').fadeOut(speed);
        $('.active').fadeIn(speed);
     });
